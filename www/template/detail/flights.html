@@ -1,0 +1,38 @@
+<h4 style="margin-top: 15px">{{ title }}</h4>
+<h5>Flight's details</h5>
+<form>
+  <div class="row">
+    <div class="six columns">
+       <label for="idInput">ID</label>
+       <input class="u-full-width" type="text" id="_id" value="{{ _id }}" readonly/>
+    </div>
+    <div class="six columns">
+       <label for="copyrightInput">Copyright</label>
+       <input class="u-full-width" type="text" id="copyright" value="{{ copyright }}" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+       <label for="editionInput">Edition</label>
+       <input class="u-full-width" type="text" id="edition" value="{{edition }}" readonly/>
+    </div>
+    <div class="six columns">
+       <label for="languageInput">Language</label>
+       <input class="u-full-width" type="text" id="language" value="{{ language }}" readonly/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="six columns">
+       <label for=" airportInput">Airport</label>
+       <a href="/airportById/?id={{ airport_id }}">
+         <input class="u-full-width" type="button" id=" airport" value="{{ airport }}" readonly/>
+       </a>
+    </div>
+    <div class="six columns">
+       <label for="languageInput">Traveler</label>
+       <a href="/travelerById/?id={{ traveler_id }}">
+         <input class="u-full-width" type="button" id="traveler" value="{{ traveler }}" readonly/>
+       </a>
+    </div>
+  </div>
+</form>

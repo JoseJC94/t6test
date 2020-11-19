@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Flights Information</h3>
+This section presents information about flights
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/flightById/?id={{ _id }}'> {{ title }}</a></li>
+  {{/.}}
+</ul>

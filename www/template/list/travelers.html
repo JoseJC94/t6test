@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Travelers Information</h3>
+This section presents information about travelers
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/travelerById/?id={{ _id }}'> {{ traveler }}</a></li>
+  {{/.}}
+</ul>

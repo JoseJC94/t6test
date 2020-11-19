@@ -1,0 +1,8 @@
+<h3 style="margin-top: 15px">Airports Information</h3>
+This section presents information about the airports of flights
+<p>
+<ul>
+  {{#.}}
+    <li><a href='/airportById/?id={{ _id }}'> {{ airport }}</a></li>
+  {{/.}}
+</ul>

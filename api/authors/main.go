@@ -7,60 +7,60 @@ import (
 	"strconv"
 )
 
-type BookRef struct {
-	BookId int    `json:"book_id"`
+type FlightRef struct {
+	FlightId int    `json:"flight_id"`
 	Title  string `json:"title"`
 }
 
-type Author struct {
+type Airport struct {
 	Id          int       `json:"_id"`
-	Author      string    `json:"author"`
+	Airport      string    `json:"airport"`
 	Nationality string    `json:"nationality"`
 	BirthYear   int       `json:"birth_year"`
 	Fields      string    `json:"fields"`
-	Books       []BookRef `json:"books"`
+	Flights       []FlightRef `json:"flights"`
 }
 
-var items []Author
+var items []Airport
 
 var jsonData string = `[
 	{
 		"_id": 1,
-		"author": "Abraham Silberschatz",
+		"airport": "Abraham Silberschatz",
 		"nationality": "Israelis / American",
 		"birth_year": 1952,
 		"fields": "Database Systems, Operating Systems",
-		"books": [
+		"flights": [
 			{
-				"book_id": 1,
+				"flight_id": 1,
 				"title": "Operating System Concepts"
 			},
 			{
-				"book_id": 2,
+				"flight_id": 2,
 				"title": "Database System Concepts"
 			}
 		]
 	},
 	{
 		"_id": 2,
-		"author": "Andrew S. Tanenbaum",
+		"airport": "Andrew S. Tanenbaum",
 		"nationality": "Dutch / American",
 		"birth_year": 1944,
 		"fields": "Distributed computing, Operating Systems",
-		"books": [
+		"flights": [
 			{
-				"book_id": 3,
+				"flight_id": 3,
 				"title": "Computer Networks"
 			},
 			{
-				"book_id": 4,
+				"flight_id": 4,
 				"title": "Modern Operating Systems"
 			}
 		]
 	}
 ]`
 
-func FindItem(id int) *Author {
+func FindItem(id int) *Airport {
 	for _, item := range items {
 		if item.Id == id {
 			return &item

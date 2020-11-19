@@ -37,23 +37,23 @@ function home() {
 function init() {
 	router = new Navigo(null, false, '#!');
 	router.on({
-		'/books': function() {
-			getAll('books');
+		'/flights': function() {
+			getAll('flights');
 		},
-		'/authors': function() {
-			getAll('authors');
+		'/airports': function() {
+			getAll('airports');
 		},
-		'/publishers': function() {
-			getAll('publishers');
+		'/travelers': function() {
+			getAll('travelers');
 		},
-		'/bookById': function(_, query) {
-			getById(query, 'books');
+		'/flightById': function(_, query) {
+			getById(query, 'flights');
 		},
-		'/authorById': function(_, query) {
-			getById(query, 'authors');
+		'/airportById': function(_, query) {
+			getById(query, 'airports');
 		},
-		'/publisherById': function(_, query) {
-			getById(query, 'publishers');
+		'/travelerById': function(_, query) {
+			getById(query, 'travelers');
 		}
 	});
 	router.on(() => home());
