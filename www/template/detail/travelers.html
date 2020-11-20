@@ -8,18 +8,18 @@
        <input class="u-full-width" id="_id" type="text" value="{{ _id }}" readonly/>
     </div>
     <div class="six columns">
-       <label for="countryInput">Country</label>
-       <input class="u-full-width" id="country" type="text" value="{{ country }}" readonly/>
+       <label for="nameInput">Name</label>
+       <input class="u-full-width" id="name" type="text" value="{{ name }}" readonly/>
     </div>
   </div>
   <div class="row">
     <div class="six columns">
-       <label for="foundedInput">Founded</label>
-       <input class="u-full-width" id="founded" type="text" value="{{ founded }}"  readonly/>
+       <label for="countryInput">Founded</label>
+       <input class="u-full-width" id="country" type="text" value="{{ country }}"  readonly/>
     </div>
     <div class="six columns">
-       <label for="genereInput">Genere</label>
-       <input class="u-full-width" id="genere" type="text" value="{{ genere }}"  readonly/>
+       <label for="sexInput">Sex</label>
+       <input class="u-full-width" id="sex" type="text" value="{{ sex }}"  readonly/>
     </div>
   </div>
 </form>
@@ -27,6 +27,6 @@
 <h5>Flights</h5>
 <ul>
 {{#flights}}
-    <li><a href="/flightById/?id={{flight_id}}">{{title}}</li>
+    <li><a href="/flightById/?id={{flight_id}}">{{_id}} {{ traveler }} {{airport}}</li>
 {{/flights}}
 </ul>
