@@ -17,6 +17,7 @@ type Traveler struct {
 	Name string    `json:"name"`
 	Country   string    `json:"country"`
 	Sex    string    `json:"sex"`
+	Flights       []FlightRef `json:"flights"`
 }
 
 var items []Traveler

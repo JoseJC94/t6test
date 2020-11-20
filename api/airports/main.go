@@ -17,6 +17,7 @@ type Airport struct {
 	Name      string    `json:"name"`
 	Country string    `json:"country"`
 	City      string    `json:"city"`
+	Flights       []FlightRef `json:"flights"`
 }
 
 var items []Airport
