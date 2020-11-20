@@ -7,20 +7,20 @@ import (
 	"strconv"
 )
 
-type Flight struct {
+type Book struct {
 	Id           int    `json:"_id"`
 	Title        string `json:"title"`
 	Edition      string `json:"edition"`
 	Copyright    int    `json:"copyright"`
 	Language     string `json:"language"`
 	Pages        int    `json:"pages"`
-	Airport       string `json:"airport"`
-	Airport_Id    int    `json:"airport_id"`
-	Traveler    string `json:"traveler"`
-	Traveler_Id int    `json:"traveler_id"`
+	Author       string `json:"author"`
+	Author_Id    int    `json:"author_id"`
+	Publisher    string `json:"publisher"`
+	Publisher_Id int    `json:"publisher_id"`
 }
 
-var flights []Flight
+var books []Book
 
 var jsonData string = `[
 	{
@@ -30,10 +30,10 @@ var jsonData string = `[
 		"copyright": 2012,
 		"language": "ENGLISH",
 		"pages": 976,
-		"airport": "Abraham Silberschatz",
-		"airport_id": 1,
-		"traveler": "John Wiley & Sons",
-		"traveler_id": 1
+		"author": "Abraham Silberschatz",
+		"author_id": 1,
+		"publisher": "John Wiley & Sons",
+		"publisher_id": 1
 	},
 	{
 		"_id": 2,
@@ -42,10 +42,10 @@ var jsonData string = `[
 		"copyright": 2010,
 		"language": "ENGLISH",
 		"pages": 1376,
-		"airport": "Abraham Silberschatz",
-		"airport_id": 1,
-		"traveler": "John Wiley & Sons",
-		"traveler_id": 1
+		"author": "Abraham Silberschatz",
+		"author_id": 1,
+		"publisher": "John Wiley & Sons",
+		"publisher_id": 1
 	},
 	{
 		"_id": 3,
@@ -54,10 +54,10 @@ var jsonData string = `[
 		"copyright": 2010,
 		"language": "ENGLISH",
 		"pages": 960,
-		"airport": "Andrew S. Tanenbaum",
-		"airport_id": 2,
-		"traveler": "Pearson Education",
-		"traveler_id": 2
+		"author": "Andrew S. Tanenbaum",
+		"author_id": 2,
+		"publisher": "Pearson Education",
+		"publisher_id": 2
 	},
 	{
 		"_id": 4,
@@ -66,17 +66,17 @@ var jsonData string = `[
 		"copyright": 2014,
 		"language": "ENGLISH",
 		"pages": 1136,
-		"airport": "Andrew S. Tanenbaum",
-		"airport_id": 2,
-		"traveler": "Pearson Education",
-		"traveler_id": 2
+		"author": "Andrew S. Tanenbaum",
+		"author_id": 2,
+		"publisher": "Pearson Education",
+		"publisher_id": 2
 	}
 ]`
 
-func FindFlight(id int) *Flight {
-	for _, flight := range flights {
-		if flight.Id == id {
-			return &flight
+func FindBook(id int) *Book {
+	for _, book := range books {
+		if book.Id == id {
+			return &book
 		}
 	}
 	return nil
@@ -86,13 +86,13 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 	id := req.QueryStringParameters["id"]
 	var data []byte
 	if id == "" {
-		data, _ = json.Marshal(flights)
+		data, _ = json.Marshal(books)
 	} else {
 		param, err := strconv.Atoi(id)
 		if err == nil {
-			flight := FindFlight(param)
-			if flight != nil {
-				data, _ = json.Marshal(*flight)
+			book := FindBook(param)
+			if book != nil {
+				data, _ = json.Marshal(*book)
 			} else {
 				data = []byte("error\n")
 			}
@@ -107,6 +107,6 @@ func handler(req events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse
 }
 
 func main() {
-	_ = json.Unmarshal([]byte(jsonData), &flights)
+	_ = json.Unmarshal([]byte(jsonData), &books)
 	lambda.Start(handler)
 }

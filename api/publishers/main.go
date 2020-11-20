@@ -7,60 +7,60 @@ import (
 	"strconv"
 )
 
-type FlightRef struct {
-	FlightId int    `json:"flight_id"`
+type BookRef struct {
+	BookId int    `json:"book_id"`
 	Title  string `json:"title"`
 }
 
-type Traveler struct {
+type Publisher struct {
 	Id        int       `json:"_id"`
-	Traveler string    `json:"traveler"`
+	Publisher string    `json:"publisher"`
 	Country   string    `json:"country"`
 	Founded   int       `json:"founded"`
 	Genere    string    `json:"genere"`
-	Flights     []FlightRef `json:"flights"`
+	Books     []BookRef `json:"books"`
 }
 
-var items []Traveler
+var items []Publisher
 
 var jsonData string = `[
 	{
 		"_id": 1,
-		"traveler": "John Wiley & Sons",
+		"publisher": "John Wiley & Sons",
 		"country": "United States",
 		"founded": 1807,
 		"genere": "Academic",
-		"flights": [
+		"books": [
 			{
-				"flight_id": 1,
+				"book_id": 1,
 				"title": "Operating System Concepts"
 			},
 			{
-				"flight_id": 2,
+				"book_id": 2,
 				"title": "Database System Concepts"
 			}
 		]
 	},
 	{
 		"_id": 2,
-		"traveler": "Pearson Education",
+		"publisher": "Pearson Education",
 		"country": "United Kingdom",
 		"founded": 1844,
 		"genere": "Education",
-		"flights": [
+		"books": [
 			{
-				"flight_id": 3,
+				"book_id": 3,
 				"title": "Computer Networks"
 			},
 			{
-				"flight_id": 4,
+				"book_id": 4,
 				"title": "Modern Operating Systems"
 			}
 		]
 	}
 ]`
 
-func FindItem(id int) *Traveler {
+func FindItem(id int) *Publisher {
 	for _, item := range items {
 		if item.Id == id {
 			return &item

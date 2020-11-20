@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb21426a-1058-4146-ad9d-6d831ff67fbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/www/template/detail/authors.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/template/detail/airports.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/authors/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/authors/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/books/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/books/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/publishers/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/publishers/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/template/detail/airports.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/template/detail/airports.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

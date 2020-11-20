@@ -19,6 +19,9 @@ function getById(query, entity) {
 			fetch('/template/detail/' + entity + '.html')
 				.then((response) => response.text())
 				.then((template) => {
+					console.log('template content');
+					console.log(template);
+					console.log(data);
 					var rendered = Mustache.render(template, data);
 					document.getElementById('content').innerHTML = rendered;
 				});
