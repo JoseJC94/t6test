@@ -14,11 +14,9 @@ type FlightRef struct {
 
 type Traveler struct {
 	Id        int       `json:"_id"`
-	Traveler string    `json:"traveler"`
+	Name string    `json:"name"`
 	Country   string    `json:"country"`
-	Founded   int       `json:"founded"`
-	Genere    string    `json:"genere"`
-	Flights     []FlightRef `json:"flights"`
+	Sex    string    `json:"sex"`
 }
 
 var items []Traveler
@@ -26,37 +24,27 @@ var items []Traveler
 var jsonData string = `[
 	{
 		"_id": 1,
-		"traveler": "John Wiley & Sons",
+		"name": "Tony Hawk",
 		"country": "United States",
-		"founded": 1807,
-		"genere": "Academic",
-		"flights": [
-			{
-				"flight_id": 1,
-				"title": "Operating System Concepts"
-			},
-			{
-				"flight_id": 2,
-				"title": "Database System Concepts"
-			}
-		]
+		"sex": "M"
 	},
 	{
 		"_id": 2,
-		"traveler": "Pearson Education",
+		"name": "Charles Negreanu",
 		"country": "United Kingdom",
-		"founded": 1844,
-		"genere": "Education",
-		"flights": [
-			{
-				"flight_id": 3,
-				"title": "Computer Networks"
-			},
-			{
-				"flight_id": 4,
-				"title": "Modern Operating Systems"
-			}
-		]
+		"sex": "M"
+	},
+	{
+		"_id": 3,
+		"name": "María Arias",
+		"country": "Costa Rica",
+		"sex": "F"
+	},
+	{
+		"_id": 4,
+		"name": "Rebeca Sauruer",
+		"country": "United States",
+		"sex": "F"
 	}
 ]`
 

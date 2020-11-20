@@ -9,11 +9,9 @@ import (
 
 type Flight struct {
 	Id           int    `json:"_id"`
-	Title        string `json:"title"`
-	Edition      string `json:"edition"`
-	Copyright    int    `json:"copyright"`
-	Language     string `json:"language"`
-	Pages        int    `json:"pages"`
+	Date        string `json:"date"`
+	BoardingTime      string `json:"boardingTime"`
+	Gate     string `json:"gate"`
 	Airport       string `json:"airport"`
 	Airport_Id    int    `json:"airport_id"`
 	Traveler    string `json:"traveler"`
@@ -25,51 +23,63 @@ var flights []Flight
 var jsonData string = `[
 	{
 		"_id": 1,
-		"title": "Operating System Concepts",
-		"edition": "9th",
-		"copyright": 2012,
-		"language": "ENGLISH",
-		"pages": 976,
-		"airport": "Abraham Silberschatz",
-		"airport_id": 1,
-		"traveler": "John Wiley & Sons",
-		"traveler_id": 1
+		"date": "11-22-2012",
+		"boardingTime": "20:00",
+		"gate": "D1",
+		"traveler": "Tony Hawk",
+		"traveler_id": 1,
+		"airport": "El Dorado",
+		"airport_id": 3
 	},
 	{
 		"_id": 2,
-		"title": "Database System Concepts",
-		"edition": "6th",
-		"copyright": 2010,
-		"language": "ENGLISH",
-		"pages": 1376,
-		"airport": "Abraham Silberschatz",
-		"airport_id": 1,
-		"traveler": "John Wiley & Sons",
-		"traveler_id": 1
+		"date": "11-29-2012",
+		"boardingTime": "20:00",
+		"gate": "H1",
+		"traveler": "Tony Hawk",
+		"traveler_id": 1,
+		"airport": "Hartsfield Jackson",
+		"airport_id": 2
 	},
 	{
 		"_id": 3,
-		"title": "Computer Networks",
-		"edition": "5th",
-		"copyright": 2010,
-		"language": "ENGLISH",
-		"pages": 960,
-		"airport": "Andrew S. Tanenbaum",
-		"airport_id": 2,
-		"traveler": "Pearson Education",
-		"traveler_id": 2
+		"date": "11-12-2012",
+		"boardingTime": "10:00",
+		"gate": "D1",
+		"traveler": "Tony Hawk",
+		"traveler_id": 1,
+		"airport": "Los Angeles",
+		"airport_id": 1
 	},
 	{
 		"_id": 4,
-		"title": "Modern Operating Systems",
-		"edition": "4th",
-		"copyright": 2014,
-		"language": "ENGLISH",
-		"pages": 1136,
-		"airport": "Andrew S. Tanenbaum",
-		"airport_id": 2,
-		"traveler": "Pearson Education",
-		"traveler_id": 2
+		"date": "11-03-2012",
+		"boardingTime": "16:00",
+		"gate": "J1",
+		"traveler": "Rebeca Sauruer",
+		"traveler_id": 4,
+		"airport": "Juan Santamaría",
+		"airport_id": 4
+	},
+	{
+		"_id": 5,
+		"date": "11-05-2012",
+		"boardingTime": "18:00",
+		"gate": "J1",
+		"traveler": "Rebeca Sauruer",
+		"traveler_id": 4,
+		"airport": "Juan Santamaría",
+		"airport_id": 4
+	},
+	{
+		"_id": 6,
+		"date": "11-02-2012",
+		"boardingTime": "14:00",
+		"gate": "E1",
+		"traveler": "María Arias",
+		"traveler_id": 3,
+		"airport": "El Dorado",
+		"airport_id": 3
 	}
 ]`
 

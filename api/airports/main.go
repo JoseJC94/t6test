@@ -14,11 +14,9 @@ type FlightRef struct {
 
 type Airport struct {
 	Id          int       `json:"_id"`
-	Airport      string    `json:"airport"`
-	Nationality string    `json:"nationality"`
-	BirthYear   int       `json:"birth_year"`
-	Fields      string    `json:"fields"`
-	Flights       []FlightRef `json:"flights"`
+	Name      string    `json:"name"`
+	Country string    `json:"country"`
+	City      string    `json:"city"`
 }
 
 var items []Airport
@@ -26,39 +24,30 @@ var items []Airport
 var jsonData string = `[
 	{
 		"_id": 1,
-		"airport": "Abraham Silberschatz",
-		"nationality": "Israelis / American",
-		"birth_year": 1952,
-		"fields": "Database Systems, Operating Systems",
-		"flights": [
-			{
-				"flight_id": 1,
-				"title": "Operating System Concepts"
-			},
-			{
-				"flight_id": 2,
-				"title": "Database System Concepts"
-			}
-		]
+		"name": "Los Angeles",
+		"country": "United Unites",
+		"city": "Los Angeles"
 	},
 	{
 		"_id": 2,
-		"airport": "Andrew S. Tanenbaum",
-		"nationality": "Dutch / American",
-		"birth_year": 1944,
-		"fields": "Distributed computing, Operating Systems",
-		"flights": [
-			{
-				"flight_id": 3,
-				"title": "Computer Networks"
-			},
-			{
-				"flight_id": 4,
-				"title": "Modern Operating Systems"
-			}
-		]
+		"name": "Hartsfield Jackson",
+		"country": "United Unites",
+		"city": "Atlanta"
+	},
+	{
+		"_id": 3,
+		"name": "El Dorado",
+		"country": "Colombia",
+		"city": "Los Angeles"
+	},
+	{
+		"_id": 4,
+		"name": "Juan Santamaría",
+		"country": "Costa Rica",
+		"city": "San José"
 	}
-]`
+]
+`
 
 func FindItem(id int) *Airport {
 	for _, item := range items {
