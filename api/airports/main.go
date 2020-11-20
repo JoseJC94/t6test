@@ -9,7 +9,8 @@ import (
 
 type FlightRef struct {
 	FlightId int    `json:"flight_id"`
-	Title  string `json:"title"`
+	Traveler  string `json:"traveler"`
+	Airport  string `json:"airport"`
 }
 
 type Airport struct {
