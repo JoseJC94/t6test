@@ -29,7 +29,7 @@ var jsonData string = `[
 		"city": "Los Angeles",
 		"flights": [
 			{
-				"_id": 3,
+				"flight_id": 3,
 				"date": "11-12-2012",
 				"boardingTime": "10:00",
 				"gate": "D1",
@@ -47,7 +47,7 @@ var jsonData string = `[
 		"city": "Atlanta",
 		"flights": [
 			{
-				"_id": 2,
+				"flight_id": 2,
 				"date": "11-29-2012",
 				"boardingTime": "20:00",
 				"gate": "H1",
@@ -65,7 +65,7 @@ var jsonData string = `[
 		"city": "Bogotá",
 		"flights": [
 			{
-				"_id": 1,
+				"flight_id": 1,
 				"date": "11-22-2012",
 				"boardingTime": "20:00",
 				"gate": "D1",
@@ -75,7 +75,7 @@ var jsonData string = `[
 				"airport_id": 3
 	},
 			{
-				"_id": 6,
+				"flight_id": 6,
 				"date": "11-02-2012",
 				"boardingTime": "14:00",
 				"gate": "E1",
@@ -93,7 +93,7 @@ var jsonData string = `[
 		"city": "San José",
 		"flights": [
 			{
-				"_id": 4,
+				"flight_id": 4,
 				"date": "11-03-2012",
 				"boardingTime": "16:00",
 				"gate": "J1",
@@ -103,7 +103,7 @@ var jsonData string = `[
 				"airport_id": 4
 			},
 			{
-				"_id": 5,
+				"flight_id": 5,
 				"date": "11-05-2012",
 				"boardingTime": "18:00",
 				"gate": "J1",
