@@ -26,9 +26,6 @@ var jsonData string = `[
 		"_id": 1,
 		"name": "Los Angeles",
 		"country": "United Unites",
-<<<<<<< Updated upstream
-		"city": "Los Angeles"
-=======
 		"city": "Los Angeles",
 		"flights": [
 			{
@@ -42,15 +39,11 @@ var jsonData string = `[
 				"airport_id": 1
 			}
 		]
->>>>>>> Stashed changes
 	},
 	{
 		"_id": 2,
 		"name": "Hartsfield Jackson",
 		"country": "United Unites",
-<<<<<<< Updated upstream
-		"city": "Atlanta"
-=======
 		"city": "Atlanta",
 		"flights": [
 			{
@@ -64,15 +57,11 @@ var jsonData string = `[
 				"airport_id": 2
 			}
 		]
->>>>>>> Stashed changes
 	},
 	{
 		"_id": 3,
 		"name": "El Dorado",
 		"country": "Colombia",
-<<<<<<< Updated upstream
-		"city": "Los Angeles"
-=======
 		"city": "Bogotá",
 		"flights": [
 			{
@@ -84,7 +73,7 @@ var jsonData string = `[
 				"traveler_id": 1,
 				"airport": "El Dorado",
 				"airport_id": 3
-			},
+	},
 			{
 				"_id": 6,
 				"date": "11-02-2012",
@@ -96,15 +85,11 @@ var jsonData string = `[
 				"airport_id": 3
 			}
 		]
->>>>>>> Stashed changes
 	},
 	{
 		"_id": 4,
 		"name": "Juan Santamaría",
 		"country": "Costa Rica",
-<<<<<<< Updated upstream
-		"city": "San José"
-=======
 		"city": "San José",
 		"flights": [
 			{
@@ -128,7 +113,6 @@ var jsonData string = `[
 				"airport_id": 4
 			}
 		]
->>>>>>> Stashed changes
 	}
 ]
 `
