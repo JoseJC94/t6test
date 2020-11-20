@@ -1,5 +1,5 @@
 function getAll(entity) {
-	fetch('https://brave-kepler-9a436c.netlify.app//api/' + entity)
+	fetch('https://airlines-ffaas.netlify.app//api/' + entity)
 	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/list/' + entity + '.html')
@@ -16,7 +16,7 @@ function getAll(entity) {
 
 function getById(query, entity) {
 	var params = new URLSearchParams(query);
-	fetch('https://brave-kepler-9a436c.netlify.app//api/' + entity + '/?id=' + params.get('id'))
+	fetch('https://airlines-ffaas.netlify.app//api/' + entity + '/?id=' + params.get('id'))
 	  .then((response) => response.json())
 		.then((data) => {
 			fetch('/template/detail/' + entity + '.html')
